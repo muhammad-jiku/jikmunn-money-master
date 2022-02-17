@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>monthly income-expense calculation</title>
+</head>
+<body>
+    <h1>monthly income-expense calculation</h1>
+    <img src="images/income-expense.jpg" alt="">
+    <!-- income section starts -->
+    <h2>Income</h2>
+    <label for="income">Income</label>
+    <input type="text" id="income-field" name="income">
+    <!-- income section ends -->
+
+    <!-- expense section starts -->
+    <h2>Expense</h2>
+    <label for="food">Food</label>
+    <input type="text" id="food-expense-field" name="food">
+    <label for="clothes">Cloth</label>
+    <input type="text" id="cloth-expense-field" name="cloth">
+    <label for="rent">Rent</label>
+    <input type="text" id="rent-expense-field" name="rent">
+    <button id="calculate-btn">Calculate</button>
+    <h2>Total Expenses: <span id="total-expense">0</span></h2>
+    <!-- expense section ends -->
+
+    <!-- save section starts -->
+    <h2>Balance: <span id="total-balance">0</span></h2>
+    <label for="save">Save</label>
+    <input type="text" id="save-field" name="save">
+    <span>%</span>
+    <button id="save-btn">Save</button>
+    <h2>Saving Amount: <span id="total-saving">0</span></h2>
+    <h2>Remaining Balance: <span id="remaining-balance">0</span></h2>
+    <!-- save section ends -->
+    <script src="js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+1. changing heading name
+2. changing image
+3. responsive (mobile,desktop)
+4. any css framework or vanilla css
+5. textfield
+6. condition
+
+bonus section
+7. 
