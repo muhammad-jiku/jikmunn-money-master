@@ -7,7 +7,7 @@ function getInputValue(money) {
 function expenseCalculation() {
   const incomeAmount = getInputValue('income');
   const foodExpenseAmount = getInputValue('food-expense');
-  const clothesExpenseAmount = getInputValue('cloth-expense');
+  const clothesExpenseAmount = getInputValue('clothes-expense');
   const rentExpenseAmount = getInputValue('rent-expense');
 
   const totalExpenseAmount =
