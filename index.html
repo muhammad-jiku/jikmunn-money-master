@@ -12,30 +12,31 @@
     <!-- income section starts -->
     <h2>Income</h2>
     <label for="income">Income</label>
-    <input type="text" id="income-field" name="income">
-    <!-- income section ends -->
+    <input type="text" id="income-amount" name="income">
 
-    <!-- expense section starts -->
+
+
     <h2>Expense</h2>
     <label for="food">Food</label>
-    <input type="text" id="food-expense-field" name="food">
+    <input type="text" id="food-expense-amount" name="food">
     <label for="clothes">Cloth</label>
-    <input type="text" id="cloth-expense-field" name="cloth">
+    <input type="text" id="cloth-expense-amount" name="cloth">
     <label for="rent">Rent</label>
-    <input type="text" id="rent-expense-field" name="rent">
+    <input type="text" id="rent-expense-amount" name="rent">
     <button id="calculate-btn">Calculate</button>
-    <h2>Total Expenses: <span id="total-expense">0</span></h2>
-    <!-- expense section ends -->
+    <h2>Total Expenses: <span id="expense-amount-total">0</span></h2>
 
-    <!-- save section starts -->
-    <h2>Balance: <span id="total-balance">0</span></h2>
+
+
+    <h2>Balance: <span id="balance-amount">0</span></h2>
     <label for="save">Save</label>
-    <input type="text" id="save-field" name="save">
+    <input type="text" id="saving-amount" name="save">
     <span>%</span>
     <button id="save-btn">Save</button>
-    <h2>Saving Amount: <span id="total-saving">0</span></h2>
-    <h2>Remaining Balance: <span id="remaining-balance">0</span></h2>
-    <!-- save section ends -->
+    <h2>Saving Amount: <span id="saving-amount-total">0</span></h2>
+    <h2>Remaining Balance: <span id="remaining-amount-total">0</span></h2>
+ 
+    <p id="error-message">Please Insert only positive integer number! string and negative value are not allowed!</p>
     <script src="js/index.js"></script>
 </body>
 </html>
