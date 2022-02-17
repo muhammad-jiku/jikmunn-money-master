@@ -1,19 +1,33 @@
-  :root{
+/* root section  */
+:root{
     
     --primary: #dfdee2d7;
 } 
 
+/* heading class starts */
 .heading{
     font-family: 'Playfair Display', serif;
 }
+/* heading class ends */
 
+/* calculation class starts */
 .calculation-section{
     background-color: var(--primary);
     padding: 10px;
     font-family: 'Poppins', sans-serif;
 }
+/* calculation class ends */
 
+/* input tags stylise starts */
+input{
+    border: none;
+    margin: 10px;
+    padding: 5px 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+/* input tags stylise ends */
 
+/* customize button starts */
 .calc-btn{
     position: relative;
     left: 50%;
@@ -33,10 +47,4 @@
     align-items: center;
     font-family: 'Montserrat', sans-serif;
 }
-
-input{
-    border: none;
-    margin: 10px;
-    padding: 5px 15px;
-    font-family: 'Montserrat', sans-serif;
-}
+/* customize button ends */

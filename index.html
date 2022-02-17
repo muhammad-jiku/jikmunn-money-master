@@ -21,17 +21,28 @@
 <body>
 
     <section class="container">
+        
+        <!-- heading starts -->
+        <!-- custom class added -->
        <section class="text-center text-capitalize mt-4 heading">
             <h1>monthly income-expense calculation</h1>
        </section>
+       <!-- heading ends -->
+
+
        <section class="row">
+           <!-- image section starts -->
            <section class="col-12 col-lg-6">
                <img class="img-fluid mt-lg-5 w-80" src="images/income-expense.jpg" alt="">
            </section>
+           <!-- image section ends -->
 
+           <!-- calculation section starts -->
             <section class="col-12 col-lg-6 mt-3">
+                <!-- custom css added -->
                 <section class="d-flex flex-column calculation-section">
 
+                    <!-- income section starts -->
                     <h2 class="text-center">Income</h2>
                     <section class="row g-3 justify-content-center align-items-center">
                         <section class="col-auto">
@@ -41,7 +52,9 @@
                             <input type="text" id="income-amount" name="income">
                         </section>
                     </section>
+                    <!-- income section ends -->
 
+                    <!-- expense section starts -->
                     <h2 class="text-center">Expense</h2>
                     <section class="row g-3 justify-content-center align-items-center">
                         <section class="col-auto">
@@ -64,17 +77,20 @@
 
                     <section class="row g-3 justify-content-center align-items-center">
                         <section class="col-auto">
-                            <label for="clothes" class="fw-bolder">Clothes:</label>
+                            <label for="clothes" class="fw-bolder">Clothes : </label>
                         </section>
                         <section class="col-auto">
                             <input type="text" id="clothes-expense-amount" name="clothes">
                         </section>
                     </section>
                     
+                    <!-- custom css added -->
                     <button id="calculate-btn" class="btn btn-primary w-50 calc-btn">Calculate</button>
                     <h2 class="text-center mt-3">Total Expenses : <span id="expense-amount-total">0</span></h2>
                     <h2 class="text-center">Balance : <span id="balance-amount">0</span></h2>
+                    <!-- expense section ends -->
 
+                    <!-- save and remaining balance section starts -->
                     <section class="row g-3 justify-content-center align-items-center">
                         <section class="col-auto">
                             <label for="save">Save : </label>
@@ -83,13 +99,17 @@
                             <input type="text" id="saving-amount" name="save"> <span class="fw-bolder">%</span>
                         </section>
                         <section class="col-auto">
+                            <!-- custom css added -->
                             <button id="save-btn" class="btn btn-primary save-btn">Save</button>
                         </section>
                     </section>
                     <h2 class="text-center">Saving Amount : <span id="saving-amount-total">0</span></h2>
                     <h2 class="text-center">Remaining Balance : <span id="remaining-amount-total">0</span></h2>
+                    <!-- save and remaining balance section ends -->
                 </section>
             </section>
+            <!-- calculation section ends -->
+
        </section>
 
                     

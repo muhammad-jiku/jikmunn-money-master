@@ -1,9 +1,11 @@
+// function for input value
 function getInputValue(money) {
   const inputValue = document.getElementById(money + '-amount');
   const inputValueAmount = parseInt(inputValue.value);
   return inputValueAmount;
 }
 
+// function for expense calculation
 function expenseCalculation() {
   const incomeAmount = getInputValue('income');
   const foodExpenseAmount = getInputValue('food-expense');
@@ -30,6 +32,7 @@ function expenseCalculation() {
   }
 }
 
+// function for save and remain balance calculation
 function saveAndRemainBalanceCalculation() {
   const incomeAmount = getInputValue('income');
   const savingAmount = getInputValue('saving');
@@ -53,10 +56,12 @@ function saveAndRemainBalanceCalculation() {
   }
 }
 
+// clicking button to invoke function for expense calculation
 document.getElementById('calculate-btn').addEventListener('click', function () {
   expenseCalculation();
 });
 
+// clicking button to invoke save and remain balance calculation
 document.getElementById('save-btn').addEventListener('click', function () {
   saveAndRemainBalanceCalculation();
 });
