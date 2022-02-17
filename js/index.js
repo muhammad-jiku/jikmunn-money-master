@@ -1,67 +1,68 @@
 // function for input value
-function getInputValue(money) {
-  const inputValue = document.getElementById(money + '-amount');
-  const inputValueAmount = parseInt(inputValue.value);
+function getInputValue(moneyAmount) {
+  let inputValue = document.getElementById(moneyAmount + '-amount');
+  let inputValueAmount = parseInt(inputValue.value);
+  if (isNaN(inputValueAmount) || inputValueAmount < 0) {
+    inputValue.value = '';
+    return alert('Please insert valid number of money!');
+  }
   return inputValueAmount;
 }
 
 // function for expense calculation
 function expenseCalculation() {
-  const incomeAmount = getInputValue('income');
-  const foodExpenseAmount = getInputValue('food-expense');
-  const clothesExpenseAmount = getInputValue('clothes-expense');
-  const rentExpenseAmount = getInputValue('rent-expense');
+  let incomeAmount = getInputValue('income');
+  let foodExpenseAmount = getInputValue('food-expense');
+  let clothesExpenseAmount = getInputValue('clothes-expense');
+  let rentExpenseAmount = getInputValue('rent-expense');
 
-  const totalExpenseAmount =
+  let totalExpenseAmountText = document.getElementById('expense-amount-total');
+  let totalExpenseAmount =
     foodExpenseAmount + clothesExpenseAmount + rentExpenseAmount;
-  const totalExpenseAmountText = document.getElementById(
-    'expense-amount-total'
-  );
-  const balanceAmount = incomeAmount - totalExpenseAmount;
-  const balanceAmountText = document.getElementById('balance-amount');
+
+  let balanceAmountText = document.getElementById('balance-amount');
+  let balanceAmount = incomeAmount - totalExpenseAmount;
 
   if (incomeAmount < totalExpenseAmount) {
-    totalExpenseAmountText.innerText =
-      'You can not spend more money than you earn!';
-    balanceAmountText.innerText = 'You can not spend more money than you earn!';
-  } else {
-    totalExpenseAmountText.innerText = totalExpenseAmount;
-    balanceAmountText.innerText = balanceAmount;
-
-    return balanceAmount;
+    return alert('You can not spend more money than you earn!');
   }
+  totalExpenseAmountText.innerText = totalExpenseAmount;
+  balanceAmountText.innerText = balanceAmount;
+
+  return balanceAmount;
 }
 
 // function for save and remain balance calculation
 function saveAndRemainBalanceCalculation() {
-  const incomeAmount = getInputValue('income');
-  const savingAmount = getInputValue('saving');
-  const totalBalance = expenseCalculation();
+  let incomeAmount = getInputValue('income');
+  let savingAmount = getInputValue('saving');
 
-  const totalSave = incomeAmount * (savingAmount / 100);
-  const savingTotalText = document.getElementById('saving-amount-total');
+  let totalBalance = expenseCalculation();
 
-  const remainingBalanceText = document.getElementById(
-    'remaining-amount-total'
-  );
+  let totalSave = (incomeAmount * savingAmount) / 100;
+  let savingTotalText = document.getElementById('saving-amount-total');
+
+  let remainingBalanceText = document.getElementById('remaining-amount-total');
 
   if (totalSave > totalBalance) {
-    savingTotalText.innerText = 'You can not save more money than you have!';
-    remainingBalanceText.innerText = 'You need money to save!';
-  } else {
-    savingTotalText.innerText = totalSave;
-    const remainingBalance = totalBalance - totalSave;
-
-    remainingBalanceText.innerText = remainingBalance;
+    return alert('You can not save more money than you have!');
   }
+  savingTotalText.innerText = totalSave;
+  let remainingBalance = totalBalance - totalSave;
+
+  remainingBalanceText.innerText = remainingBalance;
 }
 
 // clicking button to invoke function for expense calculation
-document.getElementById('calculate-btn').addEventListener('click', function () {
-  expenseCalculation();
-});
+document
+  .getElementById('calculate-btn')
+  .addEventListener('click', function (event) {
+    event.preventDefault();
+    expenseCalculation();
+  });
 
 // clicking button to invoke save and remain balance calculation
-document.getElementById('save-btn').addEventListener('click', function () {
+document.getElementById('save-btn').addEventListener('click', function (event) {
+  event.preventDefault();
   saveAndRemainBalanceCalculation();
 });
